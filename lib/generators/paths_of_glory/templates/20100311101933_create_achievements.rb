@@ -7,6 +7,7 @@ class CreateAchievements < ActiveRecord::Migration
       t.string  :achievable_type
       t.integer :ref_id
       t.string  :ref_type
+      t.string  :category
 
       t.timestamps
     end

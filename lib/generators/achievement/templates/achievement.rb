@@ -15,7 +15,7 @@ class <%= class_name %> < Achievement
   #   return unless achievable
   #   levels.each do |level|
   #     if !achievable.has_achievement?(self, level[:level]) and thing_to_check(achievable) >= level[:quota]
-  #       achievable.award_achievement(self, level[:level])
+  #       achievable.award_achievement(self, level[:level], nil, self.category)
   #     end
   #   end
   # end
@@ -24,7 +24,7 @@ class <%= class_name %> < Achievement
   # def self.award_achievements_for(achievable)
   #   return unless achievable
   #   return if achievable.has_achievement?(self)
-  #   achievable.award_achievement(self)
+  #   achievable.award_achievement(self, nil, nil, self.category)
   # end
   
   # Change to reflect the purpose of this achievement.
@@ -36,6 +36,10 @@ class <%= class_name %> < Achievement
   #  Be sure to include this file in Rails.root/public/images
   def self.image
     'achievement-default.png'
+  end
+
+  def self.category
+    'misc'
   end
   
 end
