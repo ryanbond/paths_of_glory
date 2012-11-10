@@ -3,7 +3,7 @@ class Achievement < ActiveRecord::Base
   belongs_to :achievable, :polymorphic => true
   belongs_to :ref, :polymorphic => true
 
-  attr_accessible :type, :level, :achieveable_id, :achievable_type, :ref_id, :ref_type, :achievable, :ref, :category
+  attr_accessible :type, :level, :achieveable_id, :achievable_type, :ref_id, :ref_type, :achievable, :ref, :category, :custom_id
 
   
   scope :recent, :order => "created_at desc"
