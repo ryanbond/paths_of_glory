@@ -41,5 +41,9 @@ class <%= class_name %> < Achievement
   def self.category
     'misc'
   end
+
+  def self.point_value
+    1
+  end
   
 end

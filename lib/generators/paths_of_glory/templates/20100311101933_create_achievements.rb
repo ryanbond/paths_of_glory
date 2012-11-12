@@ -9,6 +9,7 @@ class CreateAchievements < ActiveRecord::Migration
       t.string  :ref_type
       t.string  :category
       t.integer :custom_id
+      t.integer :point_value
 
       t.timestamps
     end
